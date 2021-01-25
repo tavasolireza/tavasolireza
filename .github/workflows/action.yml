@@ -10,22 +10,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # See action.yml for all options
-      - uses: lowlighter/metrics@latest
+      - name: Personal metrics
+        uses: lowlighter/metrics@latest
         with:
           # Your GitHub token
           token: ${{ secrets.MY_README_SECRET }}
           # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           base: "header, repositories"
+          config_padding: 10%
+          config_timezone: Asia/Tehran
+      - name: Personal metrics (additional)
+        uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub token
+          token: ${{ secrets.MY_README_SECRET }}
+          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
           plugin_languages: yes
           plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, Jupyter Notebook
-          config_padding: 10%
           plugin_music: yes
           plugin_music_provider: apple
           plugin_music_mode: playlist
           plugin_music_playlist: https://embed.music.apple.com/us/playlist/red-hits/pl.u-2aoqrdLCqLvNqM # Extracted source link
           plugin_music_limit: 4 # Set the number of tracks you want to display
-          config_padding: 10%
+          config_padding: 6%, 10%
           config_timezone: Asia/Tehran
 #       - name: Personal metrics
 #         uses: lowlighter/metrics@latest
