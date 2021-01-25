@@ -28,6 +28,6 @@ jobs:
           plugin_music_mode: playlist
           plugin_music_playlist: https://embed.music.apple.com/us/playlist/red-hits/pl.u-2aoqrdLCqLvNqM # Extracted source link
           plugin_music_limit: 4 # Set the number of tracks you want to display
-          config_padding: 6%, 10%
+          config_padding: 5%, 10%, 5%, 5%
 
 
