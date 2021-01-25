@@ -13,6 +13,7 @@ jobs:
       - name: Personal metrics
         uses: lowlighter/metrics@latest
         with:
+          filename: metrics.svg
           # Your GitHub token
           token: ${{ secrets.MY_README_SECRET }}
           # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
@@ -23,6 +24,7 @@ jobs:
       - name: Personal metrics (additional)
         uses: lowlighter/metrics@latest
         with:
+          filename: metrics.additional.svg
           # Your GitHub token
           token: ${{ secrets.MY_README_SECRET }}
           # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
